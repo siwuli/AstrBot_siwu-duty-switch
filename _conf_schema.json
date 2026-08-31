@@ -24,8 +24,8 @@
     "default": ["owner", "admin"]
   },
   "duty_start_on": {
-    "description": "启动时的默认状态（无历史状态记录时）",
-    "hint": "true=上班（正常接收群消息）；false=下班（静默拦截）。若已持久化过状态，则以持久化状态为准",
+    "description": "未操作过的群的默认状态",
+    "hint": "true=上班（正常接收群消息）；false=下班（静默拦截）。某个群一旦显式发过上班/下班，以该群自己的状态为准",
     "type": "bool",
     "default": true
   },
