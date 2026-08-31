@@ -1,0 +1,44 @@
+{
+  "duty_enabled": {
+    "description": "启用上下班开关",
+    "hint": "关闭后插件完全不影响机器人：上班/下班指令提示已关闭，群消息不再被拦截",
+    "type": "bool",
+    "default": true
+  },
+  "duty_permission_enabled": {
+    "description": "上班/下班指令是否需要管理员权限",
+    "hint": "开启后仅 duty_admin_ids 白名单或群内 duty_admin_role 角色可执行；关闭后任意成员都可开关",
+    "type": "bool",
+    "default": true
+  },
+  "duty_admin_ids": {
+    "description": "可执行开关的用户 ID 白名单",
+    "hint": "平台用户 ID（如 QQ 号），每行一个。私聊消息没有群角色，只能靠此白名单放行",
+    "type": "list",
+    "default": []
+  },
+  "duty_admin_role": {
+    "description": "群内可执行开关的角色",
+    "hint": "QQ 平台群主 owner、管理员 admin；留空则群消息仅按 duty_admin_ids 白名单放行",
+    "type": "list",
+    "default": ["owner", "admin"]
+  },
+  "duty_start_on": {
+    "description": "启动时的默认状态（无历史状态记录时）",
+    "hint": "true=上班（正常接收群消息）；false=下班（静默拦截）。若已持久化过状态，则以持久化状态为准",
+    "type": "bool",
+    "default": true
+  },
+  "duty_persist": {
+    "description": "持久化开关状态",
+    "hint": "开启后状态写入 data/plugin_data/duty_switch_state.json，重启 AstrBot 后保持下班/上班状态",
+    "type": "bool",
+    "default": true
+  },
+  "duty_off_reply": {
+    "description": "执行上班/下班后回复确认",
+    "hint": "开启后切换状态会收到一句确认回复；关闭则切换静默生效（下班状态下拦截仍生效）",
+    "type": "bool",
+    "default": true
+  }
+}
