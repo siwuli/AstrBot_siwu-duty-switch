@@ -40,5 +40,17 @@
     "hint": "开启后切换状态会收到一句确认回复；关闭则切换静默生效（下班状态下拦截仍生效）",
     "type": "bool",
     "default": true
+  },
+  "duty_bot_name": {
+    "description": "机器人自称",
+    "hint": "人性化提示中机器人的自称，默认「兔兔」。可改成你喜欢的称呼",
+    "type": "string",
+    "default": "兔兔"
+  },
+  "duty_user_title": {
+    "description": "对用户的称呼",
+    "hint": "人性化提示中对操作者的称呼，默认「主人」。可改成你喜欢的称呼",
+    "type": "string",
+    "default": "主人"
   }
 }
